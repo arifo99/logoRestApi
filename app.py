@@ -14,7 +14,7 @@ def home():
 def getPosts():
     company = request.args.get('company')
 
-    return json.dumps(searchEngine.getLogoLink(company))
+    return "<img src=" + json.dumps(searchEngine.getLogoLink(company)) + "></img>"
 
 if __name__ == "__main__":
     app.run()
